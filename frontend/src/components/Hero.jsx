@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+import HeroImg from "../images/hero.jpg";
+
 
 const Hero = () => {
     return (
@@ -27,7 +29,7 @@ const Hero = () => {
 
         {/* Profile Image */}
         <motion.img
-            src="/assets/profile.jpg" // replace with your image
+            src={HeroImg} // replace with your image
             alt="LELONA NTSHIBA"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -40,12 +42,12 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1.5 }}
-            className="flex space-x-6 text-2xl text-gray-300"
+            className="flex space-x-6 text-2xl text-black"
         >
-            <a href="https://www.linkedin.com/in/your-linkedin/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/lelona-ntshiba-8023b9373/" target="_blank" rel="noopener noreferrer">
             <FaLinkedin className="hover:text-blue-400 transition-colors"/>
             </a>
-            <a href="https://github.com/your-github" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/lolothemisfit" target="_blank" rel="noopener noreferrer">
             <FaGithub className="hover:text-blue-400 transition-colors"/>
             </a>
         </motion.div>

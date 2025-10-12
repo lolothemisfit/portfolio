@@ -36,3 +36,7 @@ body.dark {
 .section-dark {
   background-color: var(--section-dark);
 }
+
+html {
+  scroll-behavior: smooth;
+}
