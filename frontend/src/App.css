@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+.font-graffiti {
+  font-family: 'Permanent Marker', cursive;
+}
+
+@import "tailwindcss";
+
+/* index.css */
+
+:root {
+  --bg-light: #f5f5f5;
+  --section-light: #58a2db;
+  --bg-dark: #444242;
+  --section-dark: #5fa2da;
+  --text-light: #2c2a2a;
+  --text-dark: #ece3e3;
+}
+
+body {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  transition: background-color 0.5s, color 0.5s;
+}
+
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.section-light {
+  background-color: var(--section-light);
+  transition: background-color 0.5s;
+}
+
+.section-dark {
+  background-color: var(--section-dark);
+}
