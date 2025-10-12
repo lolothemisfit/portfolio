@@ -52,7 +52,7 @@ const About = () => {
         }`}
       >
         <img
-          src={AboutImg} // Replace this with your actual image path
+          src={AboutImg} 
           alt="Lelona Ntshiba"
           className="rounded-2xl shadow-lg w-70 h-full border-4 border-blue-500 object-cover object-center"
         />
