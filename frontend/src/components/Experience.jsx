@@ -76,7 +76,7 @@ const Experience = () => {
                 <motion.div
                     key={index}
                     variants={cardVariants}
-                    className="bg-gray-200 dark:bg-gray-800 p-6 rounded-xl shadow-md hover:scale-105 hover:shadow-xl transition-transform duration-300"
+                    className="bg-gray-300 p-6 rounded-xl shadow-md hover:scale-105 hover:shadow-xl transition-transform duration-300"
                 >
                     <h3 className="text-xl font-semibold text-blue-500">{edu.title}</h3>
                     <p className="text-gray-700 dark:text-gray-300">{edu.institution}</p>
@@ -99,7 +99,7 @@ const Experience = () => {
                 <motion.div
                     key={index}
                     variants={cardVariants}
-                    className="bg-gray-200 dark:bg-gray-800 p-6 rounded-xl shadow-md hover:scale-105 hover:shadow-xl transition-transform duration-300"
+                    className="bg-gray-300 p-6 rounded-xl shadow-md hover:scale-105 hover:shadow-xl transition-transform duration-300"
                 >
                     <h3 className="text-xl font-semibold text-blue-500">{work.title}</h3>
                     <p className="text-gray-700 dark:text-gray-300">{work.company}</p>
