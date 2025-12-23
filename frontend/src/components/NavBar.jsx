@@ -27,6 +27,8 @@ const NavBar = () => {
         <div className="hidden md:flex space-x-6 items-center">
           <Link to="about" smooth duration={500} className="text-white hover:text-blue-200 cursor-pointer">About</Link>
           <Link to="skills" smooth duration={500} className="text-white hover:text-blue-200 cursor-pointer">Skills</Link>
+          <Link to="education" smooth duration={500} className="text-white hover:text-blue-200 cursor-pointer">Education</Link>
+          <Link to="experience" smooth duration={500} className="text-white hover:text-blue-200 cursor-pointer">Experience</Link>
           <Link to="projects" smooth duration={500} className="text-white hover:text-blue-200 cursor-pointer">Projects</Link>
           <Link to="contact" smooth duration={500} className="text-white hover:text-blue-200 cursor-pointer">Contact</Link>
         </div>
