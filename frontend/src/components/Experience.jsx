@@ -60,11 +60,12 @@ const cardVariants = {
 const Experience = () => {
     return (
         <section
-            id="experience"
             className="min-h-screen px-6 md:px-20 py-16 bg-light dark:bg-dark text-light dark:text-dark"
             >
             {/* Education Section */}
-            <h2 className="text-3xl font-bold text-blue-500 mb-8">Education</h2>
+            <h2 
+                id="education"
+                className="text-3xl font-bold text-blue-500 mb-8">Education</h2>
             <motion.div
                 className="grid md:grid-cols-2 gap-6 mb-16"
                 initial="hidden"
@@ -87,7 +88,9 @@ const Experience = () => {
             </motion.div>
 
             {/* Work / Experience Section */}
-            <h2 className="text-3xl font-bold text-blue-500 mb-8">Work & Volunteer Experience</h2>
+            <h2 
+                id="experience"
+                className="text-3xl font-bold text-blue-500 mb-8">Work & Volunteer Experience</h2>
             <motion.div
                 className="grid md:grid-cols-2 gap-6"
                 initial="hidden"
