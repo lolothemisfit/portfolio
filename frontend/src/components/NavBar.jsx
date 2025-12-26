@@ -71,7 +71,7 @@ const NavBar = () => {
 
       {/* Side Drawer Menu */}
       <div
-        className={`fixed top-0 right-0 h-full w-3/4 bg-blue-500 bg-opacity-95 shadow-lg transform transition-transform duration-300 z-40 ${
+        className={`fixed top-0 right-0 h-full w-1/2 bg-blue-500 bg-opacity-95 shadow-lg transform transition-transform duration-300 z-40 ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -86,10 +86,13 @@ const NavBar = () => {
         </div>
 
         {/* Menu Links */}
-        <div className="flex flex-col space-y-6 mt-10 px-6">
+        <div className="flex flex-col space-y-6 mt-10 px-6 bg-blue-500">
           <Link onClick={() => setMenuOpen(false)} to="about" smooth duration={500} className="text-light dark:text-dark text-lg hover:text-blue-200 cursor-pointer">About</Link>
+          <Link onClick={() => setMenuOpen(false)} to="education" smooth duration={500} className="text-light dark:text-dark text-lg hover:text-blue-200 cursor-pointer">Education</Link>
+          <Link onClick={() => setMenuOpen(false)} to="experience" smooth duration={500} className="text-light dark:text-dark text-lg hover:text-blue-200 cursor-pointer">Experience</Link>
           <Link onClick={() => setMenuOpen(false)} to="skills" smooth duration={500} className="text-light dark:text-dark text-lg hover:text-blue-200 cursor-pointer">Skills</Link>
           <Link onClick={() => setMenuOpen(false)} to="projects" smooth duration={500} className="text-light dark:text-dark text-lg hover:text-blue-200 cursor-pointer">Projects</Link>
+          <Link onClick={() => setMenuOpen(false)} to="contributions" smooth duration={500} className="text-light dark:text-dark text-lg hover:text-blue-200 cursor-pointer">Contributions</Link>
           <Link onClick={() => setMenuOpen(false)} to="contact" smooth duration={500} className="text-light dark:text-dark text-lg hover:text-blue-200 cursor-pointer">Contact</Link>
         </div>
       </div>
