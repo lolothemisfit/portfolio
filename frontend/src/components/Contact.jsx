@@ -40,7 +40,7 @@ export default function Contact() {
 
   return (
     <section className="min-h-screen px-6 md:px-20 py-16 bg-light dark:bg-dark text-light dark:text-dark">
-      <h2 className="text-3xl font-bold text-light dark:text-dark mb-4">Contact Me</h2>
+      <h2 className="text-3xl font-bold text-blue-500 mb-4">Contact Me</h2>
       <p className="text-lg text-light dark:text-dark mb-8"> For any inquiries, collaborations, or just to say hello, feel free to reach out using the form below. I look forward to connecting with you!</p>
       <div className="flex justify-center">
         <form onSubmit={handleSubmit} className="space-y-4 p-6 rounded-lg shadow-md md:w-1/2 w-3/4 items-center justify-center bg-gray-500">
