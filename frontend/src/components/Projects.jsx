@@ -111,6 +111,11 @@ const Projects = () => {
             <span className="absolute opacity-0 group-hover:opacity-100 transition-opacity text-lg font-bold text-gray-900 dark:text-white">
               View More Projects
             </span>
+
+            {/* Mobile label */}
+            <span className="mt-4 text-sm text-black dark:text-black md:hidden">
+                View More Projects
+            </span>
           </motion.a>
         </motion.div>
       </div>
