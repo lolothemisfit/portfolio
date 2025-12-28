@@ -89,7 +89,7 @@ export default function Skills() {
         {skillsData.map((category, catIndex) => (
           <motion.div
             key={catIndex}
-            className="bg-gray-300 dark:bg-gray-800 p-6 rounded-xl shadow-md hover:scale-105 hover:shadow-xl transition-transform duration-300"
+            className="bg-gray-300 p-6 rounded-xl shadow-md hover:scale-105 hover:shadow-xl transition-transform duration-300"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -103,7 +103,7 @@ export default function Skills() {
               {category.skills.map((skill, index) => (
                 <motion.div
                   key={index}
-                  className="relative group w-20 h-20 flex items-center justify-center rounded-lg overflow-hidden cursor-pointer shadow-sm bg-gray-100 dark:bg-gray-700"
+                  className="relative group w-20 h-20 flex items-center justify-center rounded-lg overflow-hidden cursor-pointer shadow-sm bg-gray-100"
                   variants={cardVariants}
                 >
                   {/* Background blur layer */}
