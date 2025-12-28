@@ -63,8 +63,8 @@ const workData = [
     title: "Jobberman Nigeria & Ghana, Brighter Monday Kenya & Uganda",
     techStack: "PHP, Laravel, AlpineJS, Jenkins, TailwindCSS",
     thumbnails: [
-      { src: projectImages["../images/projects/jobberman-ng.png"], link: "https://ng.jobberman.com/" },
-      { src: projectImages["../images/projects/jobberman-gh.png"], link: "https://gh.jobberman.com/" },
+      { src: projectImages["../images/projects/jobberman-ng.png"], link: "https://www.jobberman.com" },
+      { src: projectImages["../images/projects/jobberman-gh.png"], link: "https://www.jobberman.com.gh" },
       { src: projectImages["../images/projects/brighter-monday-ke.png"], link: "https://www.brightermonday.co.ke/" },
       { src: projectImages["../images/projects/brighter-monday-ug.png"], link: "https://www.brightermonday.ug/" },
     ],
