@@ -80,9 +80,9 @@ const Experience = () => {
                     className="bg-gray-300 p-6 rounded-xl shadow-md hover:scale-105 hover:shadow-xl transition-transform duration-300"
                 >
                     <h3 className="text-xl font-semibold text-blue-500">{edu.title}</h3>
-                    <p className="text-gray-700 dark:text-gray-300">{edu.institution}</p>
+                    <p className="text-gray-500">{edu.institution}</p>
                     <p className="text-sm text-gray-500">{edu.date}</p>
-                    <p className="mt-2 text-gray-700 dark:text-gray-300">NQF Level: {edu.NQFlevel}</p>
+                    <p className="mt-2 text-gray-500">NQF Level: {edu.NQFlevel}</p>
                 </motion.div>
                 ))}
             </motion.div>
@@ -105,10 +105,10 @@ const Experience = () => {
                     className="bg-gray-300 p-6 rounded-xl shadow-md hover:scale-105 hover:shadow-xl transition-transform duration-300"
                 >
                     <h3 className="text-xl font-semibold text-blue-500">{work.title}</h3>
-                    <p className="text-gray-700 dark:text-gray-300">{work.company}</p>
+                    <p className="text-gray-500">{work.company}</p>
                     <p className="text-sm text-gray-500">{work.date}</p>
                     {work.description && (
-                    <p className="mt-2 text-gray-700 dark:text-gray-300">{work.description}</p>
+                    <p className="mt-2 text-gray-500">{work.description}</p>
                     )}
                 </motion.div>
                 ))}
