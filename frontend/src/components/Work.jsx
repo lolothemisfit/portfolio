@@ -5,7 +5,7 @@ import { containerVariants, cardVariants } from "../motionVariants";
 const Work = () => {
   return (
     <section className="min-h-screen px-6 md:px-20 py-16 section-light dark:section-dark transition-colors duration-500">
-      <h2 className="text-3xl font-bold text-light dark:text-dark mb-8">Contibutions</h2>
+      <h2 className="text-3xl font-bold text-light dark:text-dark mb-8">Contributions</h2>
 
       <motion.div
         className="grid md:grid-cols-2 gap-6"
