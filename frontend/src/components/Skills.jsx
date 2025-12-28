@@ -95,7 +95,7 @@ export default function Skills() {
             viewport={{ once: true }}
             variants={containerVariants}
           >
-            <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-200 mb-4">
+            <h3 className="text-xl font-semibold text-gray-700 mb-4">
               {category.category}
             </h3>
 
@@ -103,11 +103,11 @@ export default function Skills() {
               {category.skills.map((skill, index) => (
                 <motion.div
                   key={index}
-                  className="relative group w-20 h-20 flex items-center justify-center rounded-lg overflow-hidden cursor-pointer shadow-sm bg-gray-100"
+                  className="relative group w-20 h-20 flex items-center justify-center rounded-lg overflow-hidden cursor-pointer shadow-sm bg-gray-300"
                   variants={cardVariants}
                 >
                   {/* Background blur layer */}
-                  <div className="absolute inset-0 bg-gray-200 dark:bg-gray-700 transition-all duration-300 group-hover:backdrop-blur-sm"></div>
+                  <div className="absolute inset-0 bg-gray-200 transition-all duration-300 group-hover:backdrop-blur-sm"></div>
 
                   {/* Logo stays crisp */}
                   <img
