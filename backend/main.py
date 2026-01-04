@@ -13,9 +13,9 @@ app = FastAPI()
 
 # Allow local frontend dev servers
 origins = [
-    "http://localhost:5173/portfolio/",
+    "http://localhost:5173",
     "http://localhost:3000",
-    "https://lolothemisfit.github.io/portfolio/",
+    "https://lolothemisfit.github.io",
     "https://portfolio-api-luy5.onrender.com"
 ]
 
