@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const API_URL = import.meta.env.VITE_API_URL || "https://portfolio-api-luy5.onrender.com";
+// const API_URL = import.meta.env.VITE_API_URL || "https://portfolio-api-luy5.onrender.com";
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -11,31 +11,63 @@ export default function Contact() {
 
   async function handleSubmit(e) {
     e.preventDefault();
+
+    // basic validation
+    if (!name || !email || !message) {
+      setStatus("error");
+
+      setTimeout(() => {
+        setStatus(null);
+      }, 3000);
+
+      return;
+    }
+
     setStatus("sending");
 
-    try {
-      const res = await fetch(`${API_URL}/contact`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, subject, message }),
-      });
+    // your WhatsApp number
+    const phoneNumber = "27679524920";
 
-      if (!res.ok) throw new Error("Network response not ok");
+    // formatted message
+    const whatsappMessage = `
+    Hi Lelona,
 
-      // success: show popup and reset form
-      setStatus("sent");
-      setName("");
-      setEmail("");
-      setSubject("");
-      setMessage("");
+    My name is ${name}.
 
-      // auto-hide popup after 3s
-      setTimeout(() => setStatus(null), 3000);
-    } catch (err) {
-      console.error(err);
-      setStatus("error");
-      setTimeout(() => setStatus(null), 3000);
-    }
+    Email: ${email}
+
+    Subject: ${subject || "No subject"}
+
+    Message:
+    ${message}
+
+    Sent from your portfolio website.
+    `;
+
+    // encode message for URL
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+
+    // whatsapp link
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+    // show popup first
+    setStatus("sent");
+
+    // reset form
+    setName("");
+    setEmail("");
+    setSubject("");
+    setMessage("");
+
+    // open WhatsApp after short delay
+    setTimeout(() => {
+      window.open(whatsappURL, "_blank");
+    }, 800);
+
+    // hide popup
+    setTimeout(() => {
+      setStatus(null);
+    }, 3000);
   }
 
   return (
@@ -88,9 +120,9 @@ export default function Contact() {
           <button
             type="submit"
             disabled={status === "sending"}
-            className="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 disabled:opacity-60"
+            className="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 disabled:opacity-60"
           >
-            {status === "sending" ? "Sending..." : "Send Message"}
+            {status === "sending" ? "Sending..." : "Send WhatsApp"}
           </button>
         </div>
       </form>
@@ -98,7 +130,7 @@ export default function Contact() {
       {status === "sent" && (
         <div className="fixed inset-0 bg-black/30 flex items-center justify-center z-50">
           <div className="bg-white p-6 rounded-lg shadow-lg text-center w-80">
-            <h3 className="text-lg font-semibold">Message sent!</h3>
+            <h3 className="text-lg font-semibold">Opening Whatsapp...</h3>
           </div>
         </div>
       )}
@@ -107,7 +139,7 @@ export default function Contact() {
         <div className="fixed inset-0 bg-black/30 flex items-center justify-center z-50">
           <div className="bg-white p-6 rounded-lg shadow-lg text-center w-80">
             <h3 className="text-lg font-semibold">⚠️..</h3>
-            <p className="mt-2 text-sm text-gray-600">Something went wrong. Try again later.</p>
+            <p className="mt-2 text-sm text-gray-600">Please fill in all required fields.</p>
           </div>
         </div>
       )}
