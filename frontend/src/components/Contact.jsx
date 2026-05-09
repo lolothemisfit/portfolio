@@ -29,19 +29,19 @@ export default function Contact() {
 
     // formatted WhatsApp message
     const whatsappMessage = `
-      Hi Lelona,
+  Hi Lelona,
 
-      My name is ${name}.
+  My name is ${name}.
 
-      Email: ${email}
+  Email: ${email}
 
-      Subject: ${subject || "No subject"}
+  Subject: ${subject || "No subject"}
 
-      Message:
-      ${message}
+  Message:
+  ${message}
 
-      Sent from your portfolio website.
-          `;
+  Sent from your portfolio website.
+      `;
 
     // encode for URL
     const encodedMessage = encodeURIComponent(whatsappMessage);

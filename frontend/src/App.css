@@ -40,3 +40,8 @@ body.dark {
 html {
   scroll-behavior: smooth;
 }
+
+/* only apply when NOT focused */
+body:not(:focus-within) {
+  caret-color: transparent;
+}
