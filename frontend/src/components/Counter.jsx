@@ -95,7 +95,6 @@ export default function Counters() {
       icon: <FaClock />,
       label: "Professional Experience",
       value: `${counts.professional}+ yrs`,
-      sub: "2021 – 2026",
       link: null,
       color: "from-green-600/20 to-emerald-800/10",
     },
