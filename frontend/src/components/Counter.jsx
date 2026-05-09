@@ -81,7 +81,6 @@ export default function Counters() {
       icon: <FaLaptopCode />,
       label: "Languages & Frameworks",
       value: `${counts.languages}+`,
-      link: "#projects",
       color: "from-emerald-400/20 to-green-700/10",
     },
     {
