@@ -8,16 +8,10 @@ import Contact from './components/Contact';
 import Skills  from './components/Skills';  
 import Projects from './components/Projects';
 import Work from './components/Work';
-import { useLocation } from "react-router-dom";
+import Footer from './components/Footer';
+
 
 function App() {
-  const location = useLocation();
-
-  useEffect(() => {
-    if (document.activeElement instanceof HTMLElement) {
-      document.activeElement.blur();
-    }
-  }, [location]);
 
   return (
     <>
@@ -30,6 +24,7 @@ function App() {
         <section id="projects"><Projects /></section>
         <section id="contributions"><Work /></section>
         <section id="contact"><Contact /></section>
+        <Footer />
       </div>
     </>
   )
