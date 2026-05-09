@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-
-// const API_URL = import.meta.env.VITE_API_URL || "https://portfolio-api-luy5.onrender.com";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -28,29 +27,29 @@ export default function Contact() {
     // your WhatsApp number
     const phoneNumber = "27679524920";
 
-    // formatted message
+    // formatted WhatsApp message
     const whatsappMessage = `
-    Hi Lelona,
+        Hi Lelona,
 
-    My name is ${name}.
+        My name is ${name}.
 
-    Email: ${email}
+        Email: ${email}
 
-    Subject: ${subject || "No subject"}
+        Subject: ${subject || "No subject"}
 
-    Message:
-    ${message}
+        Message:
+        ${message}
 
-    Sent from your portfolio website.
-    `;
+        Sent from your portfolio website.
+            `;
 
-    // encode message for URL
+    // encode for URL
     const encodedMessage = encodeURIComponent(whatsappMessage);
 
-    // whatsapp link
+    // create WhatsApp URL
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
-    // show popup first
+    // show popup
     setStatus("sent");
 
     // reset form
@@ -59,7 +58,7 @@ export default function Contact() {
     setSubject("");
     setMessage("");
 
-    // open WhatsApp after short delay
+    // open WhatsApp after delay
     setTimeout(() => {
       window.open(whatsappURL, "_blank");
     }, 800);
@@ -71,75 +70,126 @@ export default function Contact() {
   }
 
   return (
-    <section className="min-h-screen px-6 md:px-20 py-16 bg-light dark:bg-dark text-light dark:text-dark">
-      <h2 className="text-3xl font-bold text-blue-500 mb-4">Contact Me</h2>
-      <p className="text-lg text-light dark:text-dark mb-8"> For any inquiries, collaborations, or just to say hello, feel free to reach out using the form below. I look forward to connecting with you!</p>
+    <section className="min-h-screen px-6 md:px-20 py-24 bg-light dark:bg-dark text-light dark:text-dark">
+      <h2 className="text-3xl font-bold text-blue-500 mb-4">
+        Contact Me
+      </h2>
+
+      <p className="text-lg mb-8 max-w-2xl">
+        For any inquiries, collaborations, freelance work, or just to say
+        hello, feel free to reach out using the form below.
+      </p>
+
       <div className="flex justify-center">
-        <form onSubmit={handleSubmit} className="space-y-4 p-6 rounded-lg shadow-md md:w-1/2 w-3/4 items-center justify-center bg-gray-500">
-        <div>
-          <label className="block text-sm font-medium text-light dark:text-dark">Name</label>
-          <input
-            className="mt-1 block md:w-3/4 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 bg-gray-200"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-          />
-        </div>
+        <form
+          onSubmit={handleSubmit}
+          className="space-y-5 p-8 rounded-2xl shadow-lg w-full max-w-2xl bg-gray-500"
+        >
+          {/* Name */}
+          <div>
+            <label className="block text-sm font-medium mb-2">
+              Name
+            </label>
 
-        <div className="justify-center items-center">
-          <label className="block text-sm font-medium text-light dark:text-dark">Email</label>
-          <input
-            type="email"
-            className="mt-1 block md:w-3/4 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 bg-gray-200"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </div>
+            <input
+              type="text"
+              autoComplete="off"
+              className="w-full rounded-xl border border-gray-300 bg-gray-100 text-black px-4 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-300"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+            />
+          </div>
 
-        <div>
-          <label className="block text-sm font-medium text-light dark:text-dark">Subject</label>
-          <input
-            className="mt-1 block md:w-3/4 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 bg-gray-200"
-            value={subject}
-            onChange={(e) => setSubject(e.target.value)}
-          />
-        </div>
+          {/* Email */}
+          <div>
+            <label className="block text-sm font-medium mb-2">
+              Email
+            </label>
 
-        <div>
-          <label className="block text-sm font-medium text-light dark:text-dark">Message</label>
-          <textarea
-            className="mt-1 block md:w-3/4 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 h-32 bg-gray-200"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            required
-          />
-        </div>
+            <input
+              type="email"
+              autoComplete="off"
+              className="w-full rounded-xl border border-gray-300 bg-gray-100 text-black px-4 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-300"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
 
-        <div>
-          <button
-            type="submit"
-            disabled={status === "sending"}
-            className="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 disabled:opacity-60"
-          >
-            {status === "sending" ? "Sending..." : "Send WhatsApp"}
-          </button>
-        </div>
-      </form>
+          {/* Subject */}
+          <div>
+            <label className="block text-sm font-medium mb-2">
+              Subject
+            </label>
+
+            <input
+              type="text"
+              autoComplete="off"
+              className="w-full rounded-xl border border-gray-300 bg-gray-100 text-black px-4 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-300"
+              value={subject}
+              onChange={(e) => setSubject(e.target.value)}
+            />
+          </div>
+
+          {/* Message */}
+          <div>
+            <label className="block text-sm font-medium mb-2">
+              Message
+            </label>
+
+            <textarea
+              autoComplete="off"
+              className="w-full h-32 resize-none rounded-xl border border-gray-300 bg-gray-100 text-black px-4 py-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-300"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              required
+            />
+          </div>
+
+          {/* Button */}
+          <div>
+            <button
+              type="submit"
+              disabled={status === "sending"}
+              className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 text-white rounded-xl hover:bg-green-700 disabled:opacity-60 transition-all duration-300 shadow-md"
+            >
+              <FaWhatsapp className="text-lg" />
+
+              {status === "sending"
+                ? "Opening..."
+                : "Send via WhatsApp"}
+            </button>
+          </div>
+        </form>
       </div>
+
+      {/* Success Popup */}
       {status === "sent" && (
         <div className="fixed inset-0 bg-black/30 flex items-center justify-center z-50">
-          <div className="bg-white p-6 rounded-lg shadow-lg text-center w-80">
-            <h3 className="text-lg font-semibold">Opening Whatsapp...</h3>
+          <div className="bg-white p-6 rounded-2xl shadow-xl text-center w-80">
+            <h3 className="text-lg font-semibold text-black">
+              Opening WhatsApp...
+            </h3>
+
+            <p className="mt-2 text-sm text-gray-600">
+              Redirecting you to WhatsApp.
+            </p>
           </div>
         </div>
       )}
 
+      {/* Error Popup */}
       {status === "error" && (
         <div className="fixed inset-0 bg-black/30 flex items-center justify-center z-50">
-          <div className="bg-white p-6 rounded-lg shadow-lg text-center w-80">
-            <h3 className="text-lg font-semibold">⚠️..</h3>
-            <p className="mt-2 text-sm text-gray-600">Please fill in all required fields.</p>
+          <div className="bg-white p-6 rounded-2xl shadow-xl text-center w-80">
+            <h3 className="text-lg font-semibold text-black">
+              ⚠️ Missing Information
+            </h3>
+
+            <p className="mt-2 text-sm text-gray-600">
+              Please fill in all required fields.
+            </p>
           </div>
         </div>
       )}
