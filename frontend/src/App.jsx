@@ -9,6 +9,8 @@ import Skills  from './components/Skills';
 import Projects from './components/Projects';
 import Work from './components/Work';
 import Footer from './components/Footer';
+import Counters from './components/Counter';
+import Education from './components/Education';
 
 
 function App() {
@@ -19,7 +21,9 @@ function App() {
         <NavBar />
         <section id="hero"><Hero /></section>
         <section id="about"><About /></section>
+        <section id="education"><Education /></section>
         <section id="experience"><Experience /></section>
+        <section id="counters"><Counters /></section>
         <section id="skills"><Skills /></section>
         <section id="projects"><Projects /></section>
         <section id="contributions"><Work /></section>
