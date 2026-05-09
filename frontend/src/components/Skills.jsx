@@ -82,8 +82,8 @@ const cardVariants = {
 
 export default function Skills() {
   return (
-    <section className="min-h-screen px-6 md:px-20 py-16 section-light dark:section-dark transition-colors duration-500">
-      <h2 className="text-3xl font-bold text-light dark:text-dark mb-8">Skills</h2>
+    <section className="min-h-screen px-6 md:px-20 py-16 bg-blue-500 transition-colors duration-500">
+      <h2 className="text-3xl font-bold text-light dark:text-dark mb-8 text-center">Skills</h2>
 
       <div className="grid md:grid-cols-2 gap-8">
         {skillsData.map((category, catIndex) => (

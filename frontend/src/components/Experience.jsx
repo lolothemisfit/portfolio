@@ -44,12 +44,12 @@ const cardVariants = {
 const Experience = () => {
     return (
         <section
-            className="min-h-screen px-6 md:px-20 py-16 bg-blue-500 text-light dark:text-dark"
+            className="min-h-screen px-6 md:px-20 py-16 bg-light dark:bg-dark"
             >
             {/* Work / Experience Section */}
             <h2 
                 id="experience"
-                className="text-3xl font-bold text-light dark:text-dark mb-8">Work & Volunteer Experience</h2>
+                className="text-3xl font-bold text-blue-500 mb-8 text-center">Work & Volunteer Experience</h2>
             <motion.div
                 className="grid md:grid-cols-2 gap-6"
                 initial="hidden"

@@ -71,11 +71,11 @@ export default function Contact() {
 
   return (
     <section className="min-h-screen px-6 md:px-20 py-24 bg-light dark:bg-dark text-light dark:text-dark">
-      <h2 className="text-3xl font-bold text-blue-500 mb-4">
+      <h2 className="text-3xl font-bold text-blue-500 mb-4 text-center">
         Contact Me
       </h2>
 
-      <p className="text-lg mb-8 max-w-2xl">
+      <p className="text-lg mb-8 max-w-2xl text-center mx-auto">
         For any inquiries, collaborations, freelance work, or just to say
         hello, feel free to reach out using the form below.
       </p>
