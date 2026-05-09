@@ -23,7 +23,7 @@ const About = () => {
       id="about"
       ref={aboutRef}
       className="min-h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-20 py-16 
-                 section-light dark:section-dark transition-colors duration-500"
+                 bg-blue-500 transition-colors duration-500"
     >
       {/* Text Section */}
       <div
@@ -31,7 +31,7 @@ const About = () => {
           visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
         }`}
       >
-        <h2 className="text-3xl font-bold text-light dark:text-dark mb-4">About Me</h2>
+        <h2 className="text-3xl font-bold text-light dark:text-dark mb-4 text-center">About Me</h2>
         <p className="text-lg leading-relaxed text-light dark:text-dark">
           Hi, I’m <span className="font-semibold">Lelona Ntshiba</span> — 
           a passionate <span className="font-semibold">Full-Stack Developer | Software Engineer</span> who loves

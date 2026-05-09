@@ -7,7 +7,7 @@ const Projects = () => {
   return (
     <section className="min-h-screen px-6 md:px-20 py-16 bg-light dark:bg-dark text-light dark:text-dark">
       {/* Section Heading */}
-      <h2 className="text-3xl font-bold text-blue-500 mb-8">Personal Projects</h2>
+      <h2 className="text-3xl font-bold text-blue-500 mb-8 text-center">Personal Projects</h2>
 
       {/* Scrollable cards container */}
       <div className="overflow-x-auto pb-4">

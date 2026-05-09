@@ -36,9 +36,9 @@ export default function Counters() {
     const targets = {
       certificates: 5,
       projects: 10,
-      languages: 6,
-      experience: 4,
-      professional: 2,
+      languages: 8,
+      experience: 5,
+      professional: 1,
     };
 
     const interval = setInterval(() => {
@@ -74,7 +74,7 @@ export default function Counters() {
       icon: <FaGithub />,
       label: "Projects Built",
       value: `${counts.projects}+`,
-      link: "https://github.com/lolothemisfit",
+      link: "https://github.com/lolothemisfit?tab=repositories",
       color: "from-green-500/20 to-lime-600/10",
     },
     {
@@ -103,14 +103,14 @@ export default function Counters() {
   return (
     <section
       id="counter-section"
-      className="py-24 px-6 md:px-20 bg-light dark:bg-dark text-light dark:text-dark relative overflow-hidden"
+      className="py-24 px-6 md:px-20 bg-light dark:bg-dark  relative overflow-hidden"
     >
       {/* subtle glow background */}
       <div className="absolute inset-0 bg-blue-500/10 blur-3xl" />
 
       <div className="max-w-6xl mx-auto text-center relative z-10">
 
-        <h2 className="text-4xl font-bold mb-4">
+        <h2 className="text-4xl font-bold mb-4 text-blue-500">
           Experience & Credentials
         </h2>
 

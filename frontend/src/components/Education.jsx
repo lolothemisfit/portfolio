@@ -34,12 +34,12 @@ const cardVariants = {
 const Education = () => {
         return (
             <section
-                className=" px-6 md:px-20 py-16 bg-light dark:bg-dark text-blue-500"
+                className=" px-6 md:px-20 py-16 bg-blue-500 text-light dark:text-dark"
                 >
                 {/* Education Section */}
                 <h2 
                 id="education"
-                className="text-3xl font-bold text-light dark:text-dark mb-8">Education</h2>
+                className="text-3xl font-bold text-light dark:text-dark mb-8 text-center">Education</h2>
                 <motion.div
                 className="grid md:grid-cols-2 gap-6 mb-16"
                 initial="hidden"
