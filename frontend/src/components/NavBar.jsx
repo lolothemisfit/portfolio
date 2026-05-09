@@ -28,6 +28,7 @@ const NavBar = () => {
           <Link to="about" smooth duration={500} className="text-white hover:text-blue-200 cursor-pointer">About</Link>
           <Link to="education" smooth duration={500} className="text-white hover:text-blue-200 cursor-pointer">Education</Link>
           <Link to="experience" smooth duration={500} className="text-white hover:text-blue-200 cursor-pointer">Experience</Link>
+          <Link to="counters" smooth duration={500} className="text-white hover:text-blue-200 cursor-pointer">Credentials</Link>
           <Link to="skills" smooth duration={500} className="text-white hover:text-blue-200 cursor-pointer">Skills</Link>
           <Link to="projects" smooth duration={500} className="text-white hover:text-blue-200 cursor-pointer">Projects</Link>
           <Link to="contributions" smooth duration={500} className="text-white hover:text-blue-200 cursor-pointer">Contributions</Link>
@@ -86,10 +87,11 @@ const NavBar = () => {
         </div>
 
         {/* Menu Links */}
-        <div className="flex flex-col space-y-6 mt-10 px-6 bg-blue-500">
+        <div className="flex flex-col space-y-6 mt-10 px-6 bg-blue-500 py-6">
           <Link onClick={() => setMenuOpen(false)} to="about" smooth duration={500} className="text-light dark:text-dark text-lg hover:text-blue-200 cursor-pointer">About</Link>
           <Link onClick={() => setMenuOpen(false)} to="education" smooth duration={500} className="text-light dark:text-dark text-lg hover:text-blue-200 cursor-pointer">Education</Link>
           <Link onClick={() => setMenuOpen(false)} to="experience" smooth duration={500} className="text-light dark:text-dark text-lg hover:text-blue-200 cursor-pointer">Experience</Link>
+          <Link onClick={() => setMenuOpen(false)} to="counters" smooth duration={500} className="text-light dark:text-dark text-lg hover:text-blue-200 cursor-pointer">Credentials</Link>
           <Link onClick={() => setMenuOpen(false)} to="skills" smooth duration={500} className="text-light dark:text-dark text-lg hover:text-blue-200 cursor-pointer">Skills</Link>
           <Link onClick={() => setMenuOpen(false)} to="projects" smooth duration={500} className="text-light dark:text-dark text-lg hover:text-blue-200 cursor-pointer">Projects</Link>
           <Link onClick={() => setMenuOpen(false)} to="contributions" smooth duration={500} className="text-light dark:text-dark text-lg hover:text-blue-200 cursor-pointer">Contributions</Link>
